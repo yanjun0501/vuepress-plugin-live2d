@@ -4,7 +4,7 @@
  * @Author: yanjun
  * @Date: 1985-10-26 16:15:00
  * @LastEditors: yanjun
- * @LastEditTime: 2019-08-16 10:33:34
+ * @LastEditTime: 2019-08-19 10:27:05
  -->
 <p align="center">
 <img src="https://avatars2.githubusercontent.com/u/19325842?s=460&v=4" alt="vuepress-plugin-live2d" width="100">
@@ -19,7 +19,7 @@ vuepres的live2d插件，支持6种模型
 
 ## Usage
 
-[使用文档](https://yanjun-forever.cn/technology/fe/2Home%20%E2%80%94%E2%80%94%20%E6%8F%90%E9%86%92%E4%B8%8B%E7%8F%AD%E5%B0%8F%E7%8C%AA%E6%89%8B.html)
+[使用文档](http://yanjun-forever.cn/technology/fe/VuePress%E6%8F%92%E4%BB%B6%20%E2%80%94%E2%80%94%20%E8%AE%A9%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B9%9F%E6%8B%A5%E6%9C%89Live2D~.html)
 - ### 使用方式
   ```shell
     npm i vuepress-plugin-live2d -S
@@ -28,7 +28,7 @@ vuepres的live2d插件，支持6种模型
   #### 然后在'/docs/.vuepress/config.js'里引入
   ```json
     plugins: [
-      'vuepress-plugin-live2d',
+      "vuepress-plugin-live2d",
     ],
   ```
 
