@@ -1,0 +1,16 @@
+{
+  "name": "vuepress-plugin-live2d",
+  "version": "0.0.1",
+  "description": "A vuepress plugin for live2d~",
+  "keywords": ["vuepress", "live2d"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanjun0501/vuepress-plugin-live2d.git"
+  },
+  "homepage": "https://github.com/yanjun0501/vuepres-plugin-live2d",
+  "author": "yanjun0501",
+  "main": "src/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
