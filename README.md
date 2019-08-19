@@ -1,0 +1,1 @@
+# vuepres-plugin-live2d
