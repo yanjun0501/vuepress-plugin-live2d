@@ -26,12 +26,12 @@ vuepres的live2d插件，支持6种模型
 
   ```
   #### 然后在'/docs/.vuepress/config.js'里引入
-  ```json
+  ```javascript
     plugins: [
       [
         "vuepress-plugin-live2d",
         {
-          'modelName': '' // 可选值6个类型（z16，Epsilon2.1，izumi，koharu，shizuku，miku
+          "modelName": "" // 可选值6个类型（z16，Epsilon2.1，izumi，koharu，shizuku，miku
         }
       ]
     ]
