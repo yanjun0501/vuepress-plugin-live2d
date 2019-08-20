@@ -8,7 +8,12 @@
  */
 const { resolve } = require("path");
 
-module.exports = {
+module.exports = (options = {}, context) => ({
+  define() {
+    const MODEL_NAME = options.modelName;
+    return {MODEL_NAME}
+  },
+
   enhanceAppFiles: resolve(__dirname, "enhanceAppFile.js"),
   globalUIComponents: "Container"
-};
+});
