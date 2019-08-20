@@ -15,7 +15,7 @@
 
 ## 介绍
 
-vuepres的live2d插件，支持6种模型
+vuepress的live2d插件，支持6种模型
 
 ## Usage
 
