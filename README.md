@@ -15,7 +15,7 @@
 
 ## 介绍
 
-vuepress的live2d插件，支持6种模型
+vuepress的live2d插件，支持8种模型
 
 ## Usage
 
@@ -31,7 +31,7 @@ vuepress的live2d插件，支持6种模型
       [
         "vuepress-plugin-live2d",
         {
-          "modelName": "" // 可选值6个类型（z16，Epsilon2.1，izumi，koharu，shizuku，miku
+          "modelName": "" // 可选值8个类型（z16，Epsilon2.1，izumi，koharu，shizuku，miku, hijiki, tororo
         }
       ]
     ]
