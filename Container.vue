@@ -67,29 +67,30 @@
     },
     methods: {
       init() {
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        )
-          ? true
-          : false;
-        if (isMobile) {
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (!MOBILE_SHOW && isMobile) {
           this.isLoaded = false;
-          return console.log("mobile do not load model");
         }
 
-        if (!window.loadlive2d) {
+        if (!window.loadlive2d && this.isLoaded) {
           const script = document.createElement("script");
           script.innerHTML = live2dJSString;
           document.body.appendChild(script);
         }
 
-        this.style = {
-          width: (150 / 1424) * document.body.clientWidth,
-          height: ((150 / 1424) * document.body.clientWidth) / 0.8
-        };
+        this.style = isMobile ? {
+                  width: (150 / 768) * document.body.clientWidth,
+                  height: ((150 / 768) * document.body.clientWidth) / 0.8
+                } :
+                {
+                  width: (150 / 1424) * document.body.clientWidth,
+                  height: ((150 / 1424) * document.body.clientWidth) / 0.8
+                };
         let live2d = MODEL_NAME ? this.model[MODEL_NAME] : (Math.random() > 0.5 ? this.model['z16'] : this.model['Epsilon2.1']);
         setTimeout(() => {
-          window.loadlive2d("live2d", live2d);
+          if (this.isLoaded) {
+            window.loadlive2d("live2d", live2d);
+          }
         });
       }
     }

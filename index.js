@@ -10,8 +10,13 @@ const { resolve } = require("path");
 
 module.exports = (options = {}, context) => ({
   define() {
-    const MODEL_NAME = options.modelName;
-    return {MODEL_NAME}
+    const modelName = options.modelName;
+    const mobileShow = options.mobileShow;
+
+    return {
+      MODEL_NAME: modelName,
+      MOBILE_SHOW: mobileShow || false,
+    }
   },
 
   enhanceAppFiles: resolve(__dirname, "enhanceAppFile.js"),
