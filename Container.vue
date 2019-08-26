@@ -88,7 +88,15 @@
                   width: (150 / 1424) * document.body.clientWidth,
                   height: ((150 / 1424) * document.body.clientWidth) / 0.8
                 };
-        let live2d = MODEL_NAME ? this.model[MODEL_NAME] : (Math.random() > 0.5 ? this.model['z16'] : this.model['Epsilon2.1']);
+        let live2d = '';
+        if (MODEL_NAME === '' || MODEL_NAME.length === 0) {
+          live2d = Math.random() > 0.5 ? this.model['z16'] : this.model['Epsilon2.1'];
+        } else if (Array.isArray(MODEL_NAME) && MODEL_NAME.length > 0) {
+          let index = Math.floor((Math.random() * MODEL_NAME.length));
+          live2d = this.model[MODEL_NAME[index]];
+        } else {
+          live2d = this.model[MODEL_NAME];
+        }
         setTimeout(() => {
           if (this.isLoaded) {
             window.loadlive2d("live2d", live2d);
