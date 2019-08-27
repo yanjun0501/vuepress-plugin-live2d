@@ -14,7 +14,7 @@ module.exports = (options = {}, context) => ({
     const mobileShow = options.mobileShow;
 
     return {
-      MODEL_NAME: modelName,
+      MODEL_NAME: modelName || '',
       MOBILE_SHOW: mobileShow || false,
     }
   },

@@ -31,13 +31,18 @@ vuepress的live2d插件，支持8种模型
       [
         "vuepress-plugin-live2d",
         {
-          "modelName": "" // 可选值8个类型（z16，Epsilon2.1，izumi，koharu，shizuku，miku, hijiki, tororo
-          "mobileShow": ""
+          "modelName": "",
+          "mobileShow": false
         }
       ]
     ]
   ```
-
+  #### 属性
+  属性名称 | 类型 | 说明 | 默认值
+  --- |--- |--- | ---
+  modelName | *String*或者*Array* |模型名称，可选值8个类型（z16，Epsilon2.1，izumi，koharu，shizuku，miku, hijiki, tororo)，也可传入一个数组```['hijiki','tororo',...]```(传入数组时刷新页面或者访问不同页面随机展示 )  | ''
+  mobileShow | *Boolean* |是否在移动端展示，默认不展示 | false
+  
 ## 参与
 
 如果有任何想法或需求，可以在 [issue](https://github.com/yanjun0501/vuepress-plugin-live2d/issues) 中写下，同时欢迎各种 pull requests
