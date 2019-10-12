@@ -1,19 +1,25 @@
-<!--
- * @Descripttion: 
- * @version: 
- * @Author: yanjun
- * @Date: 1985-10-26 16:15:00
- * @LastEditors: yanjun
- * @LastEditTime: 2019-08-19 09:46:57
- -->
 <style scoped>
-  .container {
+  .container.right-container {
     position: fixed;
     right: 50px;
     bottom: 100px;
     color: #00adb5;
   }
-  .container #live2d {
+  .container.left-container {
+    position: fixed;
+    left: 50px;
+    bottom: 100px;
+    color: #00adb5;
+  }
+  .container .live2d-left {
+    position: fixed;
+    /* opacity: 1; */
+    left: 0px;
+    bottom: 20px;
+    z-index: 99999;
+    pointer-events: none;
+  }
+  .container .live2d-right {
     position: fixed;
     /* opacity: 1; */
     right: 0px;
@@ -29,7 +35,7 @@
       id="live2d"
       :width="style.width"
       :height="style.height"
-      class="live2d"
+      :class="modelPosition"
     ></canvas>
   </div>
 </template>
@@ -57,6 +63,14 @@
           height: 250
         }
       };
+    },
+    computed: {
+      modelPosition() {
+        return MODEL_POSITION === 'left' ? 'live2d-left' : 'live2d-right';
+      },
+      containerPosition() {
+        return MODEL_POSITION === 'left' ? 'left-container ' : 'right-container';
+      },
     },
     mounted() {
       this.init();
